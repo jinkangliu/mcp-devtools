@@ -1,0 +1,12 @@
+# Node
+node_modules/
+dist/
+
+# Tauri build artifacts
+src-tauri/target/
+
+# macOS
+.DS_Store
+
+# Lock files for generated assets
+# package-lock.json is intentionally kept for npm ci reproducibility
