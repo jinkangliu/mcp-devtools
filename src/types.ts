@@ -5,13 +5,13 @@ export interface McpTool {
 }
 
 export interface JsonSchema {
-  type: string;
+  type: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object' | 'null';
   properties?: Record<string, JsonSchemaProperty>;
   required?: string[];
 }
 
 export interface JsonSchemaProperty {
-  type: string;
+  type: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object' | 'null';
   description?: string;
   enum?: string[];
   default?: unknown;
@@ -42,14 +42,14 @@ export interface HistoryEntry {
   serverId: string;
   toolName: string;
   params: unknown;
-  result: unknown | null;
+  result: unknown;
   durationMs: number;
   error: string | null;
   calledAt: number;
 }
 
 export interface CallResult {
-  result: unknown | null;
+  result: unknown;
   durationMs: number;
   error: string | null;
 }

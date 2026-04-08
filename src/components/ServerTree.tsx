@@ -1,8 +1,9 @@
+import React from 'react'
 import { Server, McpTool } from '../types'
 
 interface ServerTreeProps {
   servers: Server[]
-  setServers: (servers: Server[]) => void
+  setServers: React.Dispatch<React.SetStateAction<Server[]>>
   selectedServer: Server | null
   selectedTool: McpTool | null
   onSelectTool: (server: Server, tool: McpTool) => void
