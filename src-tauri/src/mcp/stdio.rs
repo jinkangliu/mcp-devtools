@@ -44,7 +44,16 @@ impl StdioHandle {
         self.stdin.flush()?;
 
         let mut response_line = String::new();
-        self.stdout.read_line(&mut response_line)?;
+        loop {
+            response_line.clear();
+            self.stdout.read_line(&mut response_line)?;
+            if response_line.is_empty() {
+                return Err(anyhow!("MCP server closed connection unexpectedly"));
+            }
+            if !response_line.trim().is_empty() {
+                break;
+            }
+        }
         let response: Value = serde_json::from_str(response_line.trim())?;
 
         if let Some(error) = response.get("error") {

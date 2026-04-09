@@ -52,8 +52,9 @@ Arguments: -y @modelcontextprotocol/server-filesystem /tmp
 **Example — test server (included):**
 ```
 Command: node
-Arguments: examples/test-server.js
+Arguments: /absolute/path/to/examples/test-server.js
 ```
+> Use the absolute path to `examples/test-server.js` in your local checkout.
 
 ## Roadmap
 
