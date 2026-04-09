@@ -1,4 +1,4 @@
-import { JsonSchema, JsonSchemaProperty } from '../types'
+import { JsonSchema } from '../types'
 
 export interface FormField {
   key: string
