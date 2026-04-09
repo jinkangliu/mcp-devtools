@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "mcp-devtools",
+  "productName": "MCP DevTools",
   "version": "0.1.0",
   "identifier": "com.liujinkang.mcp-devtools",
   "build": {
@@ -12,9 +12,11 @@
   "app": {
     "windows": [
       {
-        "title": "mcp-devtools",
-        "width": 800,
-        "height": 600
+        "title": "MCP DevTools",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 800,
+        "minHeight": 600
       }
     ],
     "security": {
