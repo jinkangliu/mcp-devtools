@@ -10,6 +10,7 @@ pub fn run() {
                 .add_migrations("sqlite:mcp-devtools.db", db::migrations())
                 .build(),
         )
+        .manage(mcp::new_connection_map())
         .invoke_handler(tauri::generate_handler![
             commands::server::connect_server,
             commands::server::disconnect_server,
